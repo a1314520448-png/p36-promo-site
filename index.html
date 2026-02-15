@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P36 越南河粉甜品店｜最新優惠活動</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+        :root {
+            --primary: #C62828;
+            --primary-light: #EF5350;
+            --primary-dark: #8E0000;
+            --gold: #F9A825;
+            --gold-light: #FDD835;
+            --bg-warm: #FFF8E1;
+            --bg-white: #FFFFFF;
+            --text-dark: #212121;
+            --text-mid: #424242;
+            --text-light: #757575;
+            --border: #E0E0E0;
+            --green: #2E7D32;
+            --green-light: #E8F5E9;
+            --blue: #1565C0;
+            --blue-light: #E3F2FD;
+            --orange: #E65100;
+            --orange-light: #FFF3E0;
+            --purple: #6A1B9A;
+            --purple-light: #F3E5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 14px;
+            padding: 6px 20px;
+            border-radius: 30px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero h2 {
+            font-size: 18px;
+            font-weight: 300;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-address {
+            margin-top: 16px;
+            font-size: 13px;
+            opacity: 0.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Container */
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Section */
+        .section {
+            margin: 28px 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding: 0 4px;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .section-header-text h3 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .section-header-text p {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .card-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .card-title h4 {
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .card-body {
+            padding-left: 42px;
+        }
+
+        .card-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .card-label {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .card-value {
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+
+        .card-value strong {
+            color: var(--primary);
+        }
+
+        /* Tier Table */
+        .tier-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .tier-table th {
+            background: #F5F5F5;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 12px;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .tier-table td {
+            padding: 10px 12px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #F0F0F0;
+        }
+
+        .tier-table td:first-child {
+            font-weight: 500;
+            color: var(--text-mid);
+        }
+
+        .tier-table td:last-child {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .tier-table tr:nth-child(even) {
+            background: #FAFAFA;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight-box .emoji {
+            font-size: 28px;
+        }
+
+        .highlight-box .text {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        /* Steps */
+        .steps {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #F5F5F5;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-mid);
+        }
+
+        .step-num {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Gift List */
+        .gift-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .gift-tag {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+            margin: 8px 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px 40px;
+            color: var(--text-light);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .footer-brand {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .footer-info {
+            background: white;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 0 auto 16px;
+            max-width: 400px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .footer-note {
+            font-size: 11px;
+            color: #999;
+            margin-top: 12px;
+        }
+
+        /* Color Themes */
+        .theme-green .section-icon { background: var(--green-light); }
+        .theme-green .card-number { background: var(--green); }
+        .theme-green .card-label { background: var(--green-light); color: var(--green); }
+        .theme-green .card-value strong { color: var(--green); }
+        .theme-green .tier-table td:last-child { color: var(--green); }
+
+        .theme-blue .section-icon { background: var(--blue-light); }
+        .theme-blue .card-number { background: var(--blue); }
+        .theme-blue .card-label { background: var(--blue-light); color: var(--blue); }
+        .theme-blue .card-value strong { color: var(--blue); }
+
+        .theme-orange .section-icon { background: var(--orange-light); }
+        .theme-orange .card-number { background: var(--orange); }
+        .theme-orange .card-label { background: var(--orange-light); color: var(--orange); }
+        .theme-orange .card-value strong { color: var(--orange); }
+
+        .theme-purple .section-icon { background: var(--purple-light); }
+        .theme-purple .card-number { background: var(--purple); }
+        .theme-purple .card-label { background: var(--purple-light); color: var(--purple); }
+        .theme-purple .card-value strong { color: var(--purple); }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 28px; }
+            .hero h2 { font-size: 15px; }
+            .card { padding: 16px; }
+            .card-body { padding-left: 0; }
+            .tier-table td, .tier-table th { padding: 8px 8px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-badge">2026 最新活動</div>
+        <h1>P36 越南河粉甜品店</h1>
+        <h2>呼朋引伴，優惠享不完！</h2>
+        <p class="hero-address">桃園市桃園區莊敬路二段 107 號｜0966-975-052</p>
+    </div>
+
+    <div class="container">
+
+        <!-- Section 1: 限時驚喜 -->
+        <div class="section theme-orange">
+            <div class="section-header">
+                <div class="section-icon">⏰</div>
+                <div class="section-header-text">
+                    <h3>限時驚喜，錯過不再</h3>
+                    <p>在對的時間來，享受最大的優惠！</p>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--orange)">1</div>
+                    <h4>P36 品牌日｜主餐買一送一</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--orange-light);color:var(--orange)">活動時間</span>
+                        <span class="card-value">每月 <strong>30 號</strong>，11:00 - 19:00</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--orange-light);color:var(--orange)">優惠內容</span>
+                        <span class="card-value">點任一主餐，即享<strong>買一送一</strong>（贈送同品項或等值以下主餐）。</span>
+                    </div>
+                    <div class="highlight-box">
+                        <span class="emoji">🔥</span>
+                        <span class="text">黃金加碼 12:00 - 12:30 結帳，再加送免費飲料一杯！</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--orange)">2</div>
+                    <h4>平日小確幸｜週一至週五特別折扣</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--orange-light);color:var(--orange)">活動時間</span>
+                        <span class="card-value">每<strong>週一至週五</strong>，全天適用。</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--orange-light);color:var(--orange)">優惠內容</span>
+                        <span class="card-value">所有主餐享<strong>半價</strong>或<strong>特別折扣</strong>（依店內當日公告為準）。</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--orange)">3</div>
+                    <h4>整點幸運兒｜限量前 10 名</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--orange-light);color:var(--orange)">活動時間</span>
+                        <span class="card-value">每日特定整點（如 <strong>13:00</strong>、<strong>19:00</strong>）。</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--orange-light);color:var(--orange)">優惠內容</span>
+                        <span class="card-value">成為該時段<strong>前 10 位</strong>結帳的客人，點主餐即贈<strong>神秘好禮</strong>一份！</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--orange)">4</div>
+                    <h4>新品票選｜投票就有機會</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--orange-light);color:var(--orange)">參加方式</span>
+                        <span class="card-value">在我們的社群帳號上，參與<strong>新菜色投票</strong>活動。</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--orange-light);color:var(--orange)">優惠內容</span>
+                        <span class="card-value">投票即有機會獲得<strong>河粉買一送一券</strong>！</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: 呼朋引伴 -->
+        <div class="section theme-green">
+            <div class="section-header">
+                <div class="section-icon">👥</div>
+                <div class="section-header-text">
+                    <h3>呼朋引伴，人多更划算</h3>
+                    <p>揪越多朋友，優惠力度越大！</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--green)">5</div>
+                    <h4>兩人同行，一人半價</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--green-light);color:var(--green)">參加方式</span>
+                        <span class="card-value">兩人同行，各點一份主餐。</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--green-light);color:var(--green)">優惠內容</span>
+                        <span class="card-value">第二份主餐（價低者）享<strong>半價</strong>優惠！</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--green)">6</div>
+                    <h4>主餐解鎖挑戰｜人越多送越多</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--green-light);color:var(--green)">參加方式</span>
+                        <span class="card-value">多人同行，每人各點一份主餐。</span>
+                    </div>
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>同行人數</th>
+                                <th>您的專屬優惠</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3 人同行</td>
+                                <td style="color:var(--green)">招待 1 份主餐 (點 3 送 1)</td>
+                            </tr>
+                            <tr>
+                                <td>5 人同行</td>
+                                <td style="color:var(--green)">招待 2 份主餐 (點 5 送 2)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--green)">7</div>
+                    <h4>團體折扣｜整張帳單直接打折</h4>
+                </div>
+                <div class="card-body">
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>同行人數</th>
+                                <th>帳單折扣</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 人同行</td>
+                                <td style="color:var(--green)">全單 9 折</td>
+                            </tr>
+                            <tr>
+                                <td>3 人同行</td>
+                                <td style="color:var(--green)">全單 85 折</td>
+                            </tr>
+                            <tr>
+                                <td>4 人以上</td>
+                                <td style="color:var(--green)">全單 8 折</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--green)">8</div>
+                    <h4>現金折抵｜人數越多折越多</h4>
+                </div>
+                <div class="card-body">
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>同行人數</th>
+                                <th>現折金額</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 - 3 人</td>
+                                <td style="color:var(--green)">現折 50 元</td>
+                            </tr>
+                            <tr>
+                                <td>4 - 5 人</td>
+                                <td style="color:var(--green)">現折 120 元</td>
+                            </tr>
+                            <tr>
+                                <td>6 人以上</td>
+                                <td style="color:var(--green)">現折 250 元</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--green)">9</div>
+                    <h4>小菜自由配｜揪團免費加菜</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--green-light);color:var(--green)">參加方式</span>
+                        <span class="card-value">多人同行，每人各點一份主餐。</span>
+                    </div>
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>同行人數</th>
+                                <th>免費小菜</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 人同行</td>
+                                <td style="color:var(--green)">任選 1 樣小菜</td>
+                            </tr>
+                            <tr>
+                                <td>3 - 4 人</td>
+                                <td style="color:var(--green)">任選 2 樣小菜</td>
+                            </tr>
+                            <tr>
+                                <td>5 人以上</td>
+                                <td style="color:var(--green)">任選 4 樣小菜</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: 社群互動 -->
+        <div class="section theme-blue">
+            <div class="section-header">
+                <div class="section-icon">📱</div>
+                <div class="section-header-text">
+                    <h3>社群鐵粉，專屬福利</h3>
+                    <p>動動手指，美食好禮輕鬆拿！</p>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--blue)">10</div>
+                    <h4>分享即升級</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--blue-light);color:var(--blue)">參加方式</span>
+                        <span class="card-value">將我們任一 TikTok / IG 影片<strong>分享到你的限時動態</strong>。</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--blue-light);color:var(--blue)">優惠內容</span>
+                        <span class="card-value">到店出示畫面，您的主餐<strong>免費升級加大</strong>（麵量或肉量）！</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--blue)">11</div>
+                    <h4>@ 好友，主餐我請客</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--blue-light);color:var(--blue)">參加方式</span>
+                        <span class="card-value">在我們任一影片下方，<strong>@ 你的第三位朋友</strong>。</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--blue-light);color:var(--blue)">優惠內容</span>
+                        <span class="card-value">兩人同行到店，各點主餐，其中<strong>一份主餐由我們招待</strong>！</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--blue)">12</div>
+                    <h4>標註王就是你｜五選一好禮</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--blue-light);color:var(--blue)">參加方式</span>
+                        <span class="card-value">在我們任一影片下方，一次 <strong>@ 5 位不同的朋友</strong>。</span>
+                    </div>
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--blue-light);color:var(--blue)">優惠內容</span>
+                        <span class="card-value">到店出示畫面，以下好禮<strong>任選一樣免費送</strong>：</span>
+                    </div>
+                    <div class="gift-list">
+                        <span class="gift-tag">摩摩喳喳</span>
+                        <span class="gift-tag">河粉</span>
+                        <span class="gift-tag">生春捲</span>
+                        <span class="gift-tag">炸春捲</span>
+                        <span class="gift-tag">越式麵包</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: 鐵粉認證 -->
+        <div class="section theme-purple">
+            <div class="section-header">
+                <div class="section-icon">⭐</div>
+                <div class="section-header-text">
+                    <h3>鐵粉認證，終極大獎</h3>
+                    <p>完成三步驟，主餐直接免費！</p>
+                </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-number" style="background:var(--purple)">13</div>
+                    <h4>P36 鐵粉認證｜主餐免費吃</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-row">
+                        <span class="card-label" style="background:var(--purple-light);color:var(--purple)">參加方式</span>
+                        <span class="card-value">完成以下<strong>三個步驟</strong>，即可獲得終極大獎：</span>
+                    </div>
+                    <div class="steps">
+                        <div class="step">
+                            <span class="step-num" style="background:var(--purple)">1</span>
+                            <span><strong>追蹤</strong> P36 帳號</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-num" style="background:var(--purple)">2</span>
+                            <span><strong>分享</strong>影片至限動</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-num" style="background:var(--purple)">3</span>
+                            <span>影片下方 <strong>@ 3 位朋友</strong></span>
+                        </div>
+                    </div>
+                    <div class="highlight-box" style="background:linear-gradient(135deg, var(--purple-light) 0%, #E1BEE7 100%);">
+                        <span class="emoji">🎁</span>
+                        <span class="text" style="color:var(--purple)">兩人同行到店，您的那份主餐完全免費！</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-brand">P36 越南河粉甜品店</div>
+            <div class="footer-info">
+                <div>📍 桃園市桃園區莊敬路二段 107 號</div>
+                <div>📞 0966-975-052</div>
+                <div>⏰ 營業時間至 20:30（打烊時間）</div>
+            </div>
+            <div class="footer-note">
+                ※ 以上活動皆限<strong>店內用餐</strong>，不適用於外帶與外送。<br>
+                ※ 各項優惠不得合併使用，每桌限用一種優惠方案。<br>
+                ※ P36 保留活動最終解釋權與修改權利。
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
